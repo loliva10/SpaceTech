@@ -1,0 +1,68 @@
+.botao-chat{
+
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#1a7a3c;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:30px;
+
+}
+
+.janela-chat{
+
+    position:fixed;
+
+    right:30px;
+    bottom:120px;
+
+    width:350px;
+    height:500px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.2);
+
+}
+
+.topo-chat{
+
+    height:70px;
+
+    background:#011752;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.mensagens{
+
+    padding:20px;
+
+}

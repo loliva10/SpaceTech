@@ -1,0 +1,197 @@
+.body {
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ContainerLogin {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 600px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* LADO ESQUERDO */
+.ladoEsquerdo {
+    flex: 1.2;
+    background: linear-gradient(135deg, #24CE6B 0%, #24CE6B 50%, #FFC928 50%, #FFC928 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.ladoEsquerdo::before {
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background-color: #FFC928;
+    transform: rotate(45deg);
+    top: 15%;
+    left: 10%;
+    opacity: 0.8;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.ladoEsquerdo::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #011752;
+    border-radius: 50%;
+    top: 28%;
+    left: 25%;
+    z-index: 2;
+}
+
+.BandeiraLogo {
+    position: relative;
+    z-index: 3;
+    width: 280px;
+    height: auto;
+    margin-bottom: -10px;
+    filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+}
+
+.floatingElement {
+    position: absolute;
+    background-color: #011752;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 4;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cor1 { top: 10%; right: 10%; background-color: #ffffff; color: #011752; }
+.cor2 { bottom: 15%; left: 8%; background-color: #FFC928; color: #011752; }
+
+/* LADO DIREITO */
+.ladoDireito {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.AreaLogo {
+    text-align: center;
+    margin-bottom: 30px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.AreaLogo h2 {
+    color: #011752;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.inputG {
+    margin-bottom: 20px;
+}
+
+.inputG label {
+    display: block;
+    color: #011752;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.inputG input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #ADDABE;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #011752;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9fbf9;
+}
+
+.inputG input:focus {
+    border-color: #24CE6B;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(36, 206, 107, 0.2);
+}
+
+.EscSenha {
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+.EscSenha a {
+    color: #24CE6B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.EscSenha a:hover {
+    text-decoration: underline;
+}
+
+.btnSubmit {
+    width: 100%;
+    padding: 16px;
+    background-color: #FFC928;
+    border: none;
+    border-radius: 8px;
+    color: #011752;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 201, 40, 0.3);
+}
+
+.btnSubmit:hover {
+    background-color: #e5b320;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(255, 201, 40, 0.4);
+}
+
+.btnSubmit:active {
+    transform: translateY(1px);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .ContainerLogin {
+        flex-direction: column;
+        height: auto;
+    }
+    .lado-Esquerdo {
+        min-height: 250px;
+        padding: 20px;
+    }
+
+    .ladoDireito { padding: 30px 20px; }
+}
