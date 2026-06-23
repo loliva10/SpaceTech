@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  background: #1a7a3c;
+  padding: 0 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+.nav-logo {
+  height: 32px; /* Garante um tamanho padrão para o logotipo na barra */
+  width: auto;
+  object-fit: contain;
+}
+
+.flag-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-produtos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.nav-link:visited {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.nav-user {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ── MAIN ── */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  position: relative;
+  overflow: hidden;
+  background: #ebebeb;
+}
+
+/* ── FLAG DECORATION ── */
+.flag-deco {
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ── CARD ── */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 40px 44px;
+  width: 100%;
+  max-width: 680px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: linear-gradient(to right, #1a7a3c 33%, #f5c518 33%, #f5c518 66%, #1a3a8f 66%);
+  border-radius: 0 0 16px 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ── CARD HEADER ── */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.tag-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 3px solid #f5c518;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a7a3c;
+  line-height: 1.1;
+}
+
+.card-title span {
+  color: #1a3a8f;
+}
+
+.title-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.divider-line {
+  height: 2px;
+  width: 90px;
+  background: #1a3a8f;
+  border-radius: 2px;
+}
+
+.star {
+  color: #f5c518;
+  font-size: 1.1rem;
+}
+
+.card-sub {
+  color: #666;
+  font-size: 0.97rem;
+  text-align: center;
+}
+
+/* ── FIELDS ── */
+.field {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.field-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 22px;
+}
+
+.field-icon.green  { background: #e8f5ed; border: 2px solid #1a7a3c; }
+.field-icon.yellow { background: #fdf8e1; border: 2px solid #f5c518; }
+.field-icon.blue   { background: #e8ecf8; border: 2px solid #1a3a8f; }
+/* Estilo para a caixa do ícone roxo da imagem */
+.field-icon.purple { background: #f3e8ff; border: 2px solid #6b21a8; }
+
+.field-body {
+  flex: 1;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #1a7a3c;
+}
+
+.field-label .req {
+  color: #f5c518;
+  margin-left: 2px;
+}
+
+.field-input,
+.field-select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  color: #444;
+  background: white;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.field-input::placeholder {
+  color: #bbb;
+}
+
+/* Customização para o input do tipo arquivo (file) */
+.field-input[type="file"] {
+  cursor: pointer;
+  padding: 11px 16px; /* Ajuste leve para alinhar o texto interno do arquivo */
+}
+
+/* Modificadores de Borda e Foco */
+.green-border {
+  border: 2px solid #1a7a3c;
+}
+.green-border:focus {
+  box-shadow: 0 0 0 3px rgba(26, 122, 60, 0.15);
+}
+
+.yellow-border {
+  border: 2px solid #f5c518;
+}
+.yellow-border:focus {
+  box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.15);
+}
+
+/* Adicionando foco roxo combinando com seu sistema de cores */
+.purple-border {
+  border: 2px solid #6b21a8;
+}
+.purple-border:focus {
+  box-shadow: 0 0 0 3px rgba(107, 33, 168, 0.15);
+}
+
+/* ── PREVIEW DA IMAGEM ── */
+.image-preview {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.image-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px dashed #6b21a8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ── SELECT ── */
+.select-wrap {
+  position: relative;
+}
+
+.field-select {
+  border: 2px solid #1a3a8f;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.field-select:focus {
+  box-shadow: 0 0 0 3px rgba(26, 58, 143, 0.15);
+}
+
+.field-select option {
+  color: #444;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #1a3a8f;
+  display: flex;
+  align-items: center;
+}
+
+/* ── BUTTON ── */
+.btn-cadastrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 17px;
+  background: #1a3a8f;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  transition: background 0.18s, transform 0.1s;
+}
+
+.btn-cadastrar:hover {
+  background: #14306e;
+  transform: translateY(-1px);
+}
+
+.btn-cadastrar:active {
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .flag-deco {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 16px;
+  }
+}
+
+/* Esconde o input original do navegador */
+.input-file-hidden {
+  display: none;
+}
+
+/* Estiliza a label para parecer um input do seu sistema */
+.custom-file-upload {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.97rem;
+  color: #bbb; /* Cor igual a do placeholder dos outros inputs */
+  background: white;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+/* Quando o usuário passa o mouse por cima do botão de escolher imagem */
+.custom-file-upload:hover {
+  background: #fbfbfe;
+  color: #6b21a8; /* O texto ganha a cor roxa do destaque */
+}
+
+/* Mantém o efeito de foco roxo que criamos antes */
+.purple-border {
+  border: 2px solid #6b21a8;
+}
