@@ -1,0 +1,136 @@
+body{
+    background:#ebebeb;
+    font-family:Inter,sans-serif;
+}
+
+.navbar{
+
+    background:#1a7a3c;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+.logo{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.perfil{
+
+    width:500px;
+
+    margin:70px auto;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.foto{
+
+    width:140px;
+
+    height:140px;
+
+    background:#FFC928;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.perfil h1{
+
+    color:#011752;
+
+    margin-bottom:20px;
+
+}
+
+.perfil h2{
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+.perfil span{
+
+    background:#24CE6B;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:15px;
+
+    font-weight:bold;
+
+    margin-bottom:40px;
+
+}
+
+.perfil button{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#011752;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.perfil button:hover{
+
+    background:#00103d;
+
+}
